@@ -1,10 +1,10 @@
 <template>
   <div class="about">
-    <router-link to="/"><h1>This is a back button</h1></router-link>
     <p>Id: {{ book.id }}</p>
     <p>Naziv: {{ book.naziv }}</p>
     <p>ISBN: {{ book.isbn }}</p>
-    <p>Autori: {{ book.autori }}</p>
+    <p>Autori: {{ book.autori.join(", ") }}</p>
+    <router-link to="/"><h3>GO HOME</h3></router-link>
   </div>
 </template>
 

@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <h1>WA-BLIC-04</h1>
     </nav>
     <router-view />
   </div>

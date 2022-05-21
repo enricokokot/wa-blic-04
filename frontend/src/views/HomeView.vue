@@ -2,7 +2,7 @@
   <div class="home">
     <li v-for="book in books" :key="book.isbn">
       <router-link :to="{ name: 'about', params: { bookId: book.id } }">
-        {{ book.id }}, {{ book.naziv }}, {{ book.isbn }}</router-link
+        {{ book.id }}. {{ book.naziv }}, {{ book.isbn }}</router-link
       >
     </li>
   </div>
