@@ -11,7 +11,7 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/about",
+    path: "/knjige/:bookId",
     name: "about",
     props: true,
     // route level code-splitting

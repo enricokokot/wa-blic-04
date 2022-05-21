@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <li v-for="book in books" :key="book.isbn" :bookUrl="book.url">
-      <router-link :to="{ name: 'about', params: { bookUrl: book.url } }">
-        {{ book.name }}, {{ book.authors[0] }}, {{ book.released }}</router-link
+    <li v-for="book in books" :key="book.isbn">
+      <router-link :to="{ name: 'about', params: { bookId: book.id } }">
+        {{ book.id }}, {{ book.naziv }}, {{ book.isbn }}</router-link
       >
     </li>
   </div>
@@ -13,7 +13,7 @@
 export default {
   name: "HomeView",
   async mounted() {
-    const response = await fetch("https://www.anapioficeandfire.com/api/books");
+    const response = await fetch("http://localhost:3000/knjige");
     const data = await response.json();
     this.books = data;
   },
